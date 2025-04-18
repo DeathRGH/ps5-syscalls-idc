@@ -1,7 +1,5 @@
 static add_sysent_struct(_num_syscalls, _sysents_start)
 {
-    auto typedef_id = add_struc(-1, "sy_call_t", 0);
-
     auto struct_id = add_struc(-1, "sysent", 0);
     add_struc_member(struct_id, "n_arg", 0x00, FF_DWORD, -1, 4);
     add_struc_member(struct_id, "pad_0x04", 0x04, FF_DWORD, -1, 4);
